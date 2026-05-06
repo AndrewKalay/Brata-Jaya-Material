@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Hero Section – Kristal Flat</title>
+
+<style>
+/* RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/*           HERO SECTION          */
+/* =============================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  background-image: url("https://static.wixstatic.com/media/a69b25_09c774d723ff4329ba4e6eae45afc64a~mv2.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-inline: 6%;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 3;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 55%;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero-title span {
+  color: #fcb042;
+}
+
+.hero-subtitle {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 480px;
+}
+
+.hero-buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #fcb042;
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* =============================== */
+/*               LOGO              */
+/* =============================== */
+.hero-logo {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px; /* besar saat desktop */
+  height: auto;
+  z-index: 6;
+}
+
+/* =============================== */
+/*            RESPONSIVE           */
+/* =============================== */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-top: clamp(20px, 8vw, 40px);
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .hero-logo {
+    width: 90px;
+  	top: 4%;
+  	right: 5%;
+  	transform: translateY(0);
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+    max-width: 350px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 80%;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Logo mengecil & naik ke atas */
+  .hero-logo {
+    width: 120px;
+    top: 4%;
+    right: 5%;
+    transform: translateY(0);
+  }
+}
+</style>
+  
+</head>
+
+<body>
+
+<!-- =============================== -->
+<!--           HERO SECTION          -->
+<!-- =============================== -->
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <img 
+    src="https://static.wixstatic.com/media/a69b25_6811ca815ace4ee3a8a5ef4f0da49248~mv2.png"
+    alt="Kristal Flat Logo"
+    class="hero-logo"
+  >
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Kristal Flat Polycarbonate: Material Atap Transparan untuk<br>
+      <span>Rumah Modern</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Corrugated Polycarbonate Sheet kualitas permium dengan kejernihan tingkat tinggi.
+    </p>
+    
+	<!-- BUTTON WA-->
+    <div class="hero-buttons">
+      <a href="https://www.bratajayastore.com/contact-8" 
+         target="_blank" 
+         class="btn-primary" >HUBUNGI TIM SALES</a>
+      
+      <a href="https://a69b259e-69d3-4114-975a-ca21d9ea0063.usrfiles.com/ugd/a69b25_1293131ba9194ec7b78645c8b98c72b5.pdf" 
+         target="_blank" 
+         class="btn-secondary">DOWNLOAD PRICELIST</a>
+    </div>
+  </div>
+  
+</section>
+
+<!-- =============================== -->
+<!--              JS                 -->
+<!-- =============================== -->
+<script>
+// Fade-in hero animation
+window.addEventListener("load", () => {
+  const heroContent = document.querySelector(".hero-content");
+  heroContent.style.transition = "0.6s ease";
+  heroContent.style.opacity = "1";
+  heroContent.style.transform = "translate3d(0, 0, 0)";
+});
+</script>
+
+</body>
+</html>
