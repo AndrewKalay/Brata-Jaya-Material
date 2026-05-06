@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kristal Flat - Keunggulan & Area Penggunaan</title>
+<style>
+/* ========== Global Style ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafb;
+  color: #222;
+}
+
+/* Container umum */
+.section {
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Judul Section */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+/* ========== Section Keunggulan ========== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 2fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #0099cc;
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #3d4f5c;
+}
+
+.feature-desc {
+  font-size: 12px;
+  color: #555;
+}
+
+/* ========== Section Area Penggunaan ========== */
+.usage-carousel-wrapper {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+.usage-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.usage-card {
+  flex: 0 0 250px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.usage-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.usage-info {
+  padding: 20px;
+}
+
+.usage-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #3d4f5c;
+}
+
+.usage-desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.usage-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Scrollbar */
+.usage-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.usage-carousel::-webkit-scrollbar-thumb {
+  background: #fcb042;
+  border-radius: 10px;
+}
+.feature-icon img {
+    width: 60px;          /* atur lebar icon */
+    height: 60px;         /* atur tinggi icon */
+    object-fit: contain;  /* menjaga proporsi gambar */
+    display: block;
+    margin: 0 auto 12px;  /* membuat icon di tengah & beri jarak bawah */
+  }
+
+/* ========== Responsiveness ========== */
+@media (max-width: 768px) {
+  .section {
+    padding: 10px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+
+  .features-grid{
+    max-width: 320px;
+    margin: auto;
+    gap: 10px;
+  }
+
+  .feature-card {
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .feature-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .usage-desc {
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== SECTION KEUNGGULAN ========== -->
+<section class="section" id="keunggulan">
+  <h2 class="section-title">Keunggulan Kristal Flat</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_c7d733883cab432d88a11a6e26200422~mv2.png" 
+        alt="Icon Kristal Flat Lebih Kuat Dari Kaca" /></div>
+      <div class="feature-title">Lebih Kuat Dari Kaca</div>
+      <div class="feature-desc">Memberikan keindahan modern 250 kali lebih kuat daripada kaca.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_5d74f1f7e72d43359d6896270def438d~mv2.png" 
+        alt="Icon Kristal Flat Anti UV" /></div>
+      <div class="feature-title">Anti UV</div>
+      <div class="feature-desc">Menahan panas tanpa mengurangi cahaya masuk.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_28587dc3f4ae48a7af5a3a04f904a5dd~mv2.png" 
+        alt="Icon Kristal Flat Hemat Listrik" /></div>
+      <div class="feature-title">Hemat Listrik</div>
+      <div class="feature-desc">Mengurangi penggunaan lampu melalui pencahayaan alami.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_25b0ad78353f425884e06e3277e44c30~mv2.png" 
+        alt="Icon Kristal Flat Ringan dan Kuat" /></div>
+      <div class="feature-title">Ringan & Kuat</div>
+      <div class="feature-desc">Mudah dipasang dengan ketahanan benturan tinggi.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_e0ca3e23244d4941ac12f84bfeb64b4a~mv2.png" 
+        alt="Icon Kristal Flat Mudah Dibersihkan" /></div>
+      <div class="feature-title">Mudah Dibersihkan</div>
+      <div class="feature-desc">Cukup disiram air untuk menjaga tampilannya tetap bening.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_8c3f783fd8484a429107b6d29580e930~mv2.png" 
+        alt="Icon Kristal Flat Transparansi Tinggi" /></div>
+      <div class="feature-title">Transparansi Tinggi</div>
+      <div class="feature-desc">Memberikan pencahayaan alami tanpa silau berlebihan.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_d5370d0bb11e446aa458a732986c39cb~mv2.png" 
+        alt="Icon Kristal Flat Ramah Lingkungan" /></div>
+      <div class="feature-title">Ramah Lingkungan</div>
+      <div class="feature-desc">Terbuat dari bahan yang dapat didaur ulang dan tahan lama.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon"><img src="https://static.wixstatic.com/media/b62b9e_23584f6d0a7344a084a6b5c671fb07d0~mv2.png" 
+        alt="Icon Kristal Flat Estetika Modern" /></div>
+      <div class="feature-title">Estetika Modern</div>
+      <div class="feature-desc">Meningkatkan tampilan rumah dengan desain elegan.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== SECTION AREA PENGGUNAAN ========== -->
+<section class="section" id="area-penggunaan">
+  <h2 class="section-title">Tempat yang Cocok Menggunakan Kristal Flat</h2>
+
+  <div class="usage-carousel-wrapper">
+    <div class="usage-carousel">
+
+      <div class="usage-card">
+        <img src="https://static.wixstatic.com/media/a69b25_09c774d723ff4329ba4e6eae45afc64a~mv2.webp" alt="Referensi Kanopi Kristal Flat">
+        <div class="usage-info">
+          <div class="usage-title">Kanopi Rumah</div>
+          <div class="usage-desc">Memberikan perlindungan dan pencahayaan alami.</div>
+        </div>
+      </div>
+
+      <div class="usage-card">
+        <img src="https://static.wixstatic.com/media/a69b25_ab84a47647c648faaea3bbc22e345695~mv2.webp" alt="Referensi Skylight Kristal Flat">
+        <div class="usage-info">
+          <div class="usage-title">Skylight</div>
+          <div class="usage-desc">Ciptakan cahaya alami tanpa panas berlebih.</div>
+        </div>
+      </div>
+
+      <div class="usage-card">
+        <img src="https://static.wixstatic.com/media/a69b25_23f75141fde34bb6ab9f65b47845f6c3~mv2.webp" alt="Referensi Carport Kristal Flat">
+        <div class="usage-info">
+          <div class="usage-title">Carport</div>
+          <div class="usage-desc">Melindungi kendaraan dari hujan dan sinar matahari.</div>
+        </div>
+      </div>
+
+      <div class="usage-card">
+        <img src="https://static.wixstatic.com/media/a69b25_f19d9869d9004313ac99cb69a481685f~mv2.webp" alt="Referensi Atap Teras Kristal Flat">
+        <div class="usage-info">
+          <div class="usage-title">Teras & Balkon</div>
+          <div class="usage-desc">Menciptakan ruang semi-terbuka yang nyaman.</div>
+        </div>
+      </div>
+
+      <div class="usage-card">
+        <img src="https://static.wixstatic.com/media/a69b25_916064d6d7c748f79f991aa4390ab605~mv2.webp" alt="Referensi Greenhouse Kristal Flat">
+        <div class="usage-info">
+          <div class="usage-title">Greenhouse</div>
+          <div class="usage-desc">Cahaya maksimal untuk tanaman tanpa panas berlebih.</div>
+        </div>
+      </div>
+
+      <div class="usage-card">
+        <img src="https://static.wixstatic.com/media/a69b25_eca2fafe36d9486182e1d7aeced0eae6~mv2.webp" alt="Railing Tangga Kristal Flat">
+        <div class="usage-info">
+          <div class="usage-title">Railing Tangga</div>
+          <div class="usage-desc">Design rumah lebih mewah dan estetik.</div>
+        </div>
+      </div>
+      
+      <div class="usage-card">
+        <img src="https://static.wixstatic.com/media/a69b25_f3af3f00e8624e8188b679a44bf75278~mv2.webp" alt="Transparant Wall Kristal Flat">
+        <div class="usage-info">
+          <div class="usage-title">Transparant Wall</div>
+          <div class="usage-desc">Perlindungan transparan tanpa menghalangi pandangan.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+// Efek smooth scroll jika diperlukan
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+
+</body>
+</html>
